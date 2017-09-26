@@ -1,3 +1,4 @@
+syntax on
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -14,7 +15,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-
+" lean & mean status/tabline for vim that's light as air
+Plugin 'vim-airline/vim-airline'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -30,3 +32,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 set shell=/bin/bash
+" == Vim-airline Configuration ==
+"
+" Automatically displays all buffers when there's only one tab open.
+let g:airline#extensions#tabline#enabled = 1
